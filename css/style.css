@@ -5,6 +5,7 @@
   --color-base: #262626;
   --color-white: #ffffff;
   --color-light: #5a5a5a;
+  --color-grey: #d9d9d9;
   --color-primary: #0065fc;
   --color-secondary: #f2f2f2;
   --color-info: #deebff;
@@ -153,7 +154,7 @@ main {
 }
 
 .form__group--fieldset {
-  gap: 1rem;
+  gap: 2rem;
   flex-wrap: wrap;
   align-items: center;
   height: unset;
@@ -204,10 +205,14 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 2px solid var(--color-secondary);
+  border: 2px solid var(--color-grey);
   border-radius: 25px;
   padding-right: var(--spacing-base);
   font-weight: var(--font-weight-bolder);
+}
+
+.form__check:hover {
+  background-color: var(--color-info);
 }
 
 .form__check:before {
@@ -215,14 +220,16 @@ main {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background-color: var(--color-info);
   display: flex;
   align-items: center;
   justify-content: center;
   background-size: 1.25rem;
   background-repeat: no-repeat;
   background-position: center center;
-  margin-right: var(--spacing-base);
+}
+
+.form__check:has(input:checked) {
+  background-color: var(--color-info);
 }
 
 .form__check--dog:before {
