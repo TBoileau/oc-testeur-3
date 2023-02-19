@@ -1,0 +1,37 @@
+main > .container {
+    display: flex;
+    flex-direction: column;
+}
+
+.lodgings--most-popular .lodgings__list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.lodgings--most-popular .lodgings__list .lodging {
+    width: calc(50% - .5rem);
+    flex-grow: 0;
+}
+
+.activities__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    height: unset;
+}
+
+.activity {
+    flex-basis: calc(50% - 1rem);
+}
+
+.activity__image {
+    height: 150px;
+}
+
+.footer > .container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
