@@ -48,7 +48,7 @@ b {
 }
 
 .header__logo {
-    height: 50px;
+    height: 19px;
     object-fit: contain;
     margin: var(--spacing-base) 0;
 }
