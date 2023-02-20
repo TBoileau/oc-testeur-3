@@ -1,0 +1,169 @@
+body {
+  padding: 0;
+}
+
+.container {
+  padding: 0;
+}
+
+main section {
+  padding: var(--spacing-base);
+}
+
+.header {
+  flex-direction: column;
+  margin-bottom: var(--spacing-base);
+  align-items: stretch;
+}
+
+.header__logo {
+  height: 40px;
+  object-fit: contain;
+  margin: calc(var(--spacing-base) * 1.5) 0;
+}
+
+.header .nav__item {
+  flex-basis: 50%;
+  padding: 0 0 var(--spacing-base);
+}
+
+.header .nav__item:not(.nav__item--active):before {
+  content: "";
+  height: 2px;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  background-color: var(--color-secondary);
+}
+
+.header .nav__item:before {
+  top: unset;
+  bottom: 0;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.research {
+  order: 1;
+}
+
+.form__group {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.form__input {
+  width: calc(100% + 1rem - 100px);
+}
+
+.form__submit {
+  width: 50px;
+  border-radius: 1rem;
+  margin-left: -1rem;
+}
+
+.form__submit > span {
+  display: none;
+}
+
+.form__submit > .icon {
+  display: block;
+  fill: var(--color-white);
+}
+
+.form__legend {
+  width: 100%;
+}
+
+.form__group--fieldset {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-base);
+}
+
+.form__check {
+  justify-content: flex-start;
+  font-size: var(--text-xsmall);
+  padding-right: unset;
+  width: calc(50% - (var(--spacing-base) / 2));
+}
+
+.form__check:before {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.research__info {
+  display: flex;
+  align-items: flex-start;
+}
+
+.research__info > p {
+  padding-top: .385rem;
+}
+
+.research__info > span {
+  flex-shrink: 0;
+}
+
+.lodgings {
+  border-radius: unset;
+  flex-basis: unset;
+  order: 3;
+  padding: calc(2 * var(--spacing-base)) var(--spacing-base);
+}
+
+.lodgings:not(.lodgings--most-popular) {
+  background: unset;
+  padding-bottom: 0;
+  padding-top: 0;
+}
+
+.lodgings--most-popular {
+  order: 2;
+}
+
+.lodgings__list {
+  display: flex;
+  flex-direction: column;
+}
+
+.lodgings:not(.lodgings--most-popular) .lodging__image {
+  height: 125px;
+}
+
+.lodgings--most-popular .lodging__image {
+  width: 40%;
+  aspect-ratio: 1/1;
+  border-radius: 1rem 0 0 1rem;
+}
+
+.activities {
+  order: 4;
+}
+
+.activities__list {
+  height: unset;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.activity__image {
+  height: 150px;
+}
+
+.footer {
+  background: var(--color-secondary);
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: calc(2 * var(--spacing-base));
+}
