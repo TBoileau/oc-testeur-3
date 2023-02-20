@@ -25,7 +25,6 @@
 }
 
 * {
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -290,7 +289,6 @@ main {
 .lodgings__list {
   flex-grow: 1;
   margin-top: calc(2 * var(--spacing-base));
-  display: -ms-grid;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
@@ -419,12 +417,7 @@ main {
 }
 
 .activity {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
   flex-direction: column;
   border-radius: 1rem;
 }
