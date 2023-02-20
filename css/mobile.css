@@ -133,7 +133,7 @@ main {
 }
 
 .lodgings:not(.lodgings--most-popular) .lodging__image {
-  height: 100px;
+  height: 125px;
 }
 
 .lodgings--most-popular .lodging__image {
