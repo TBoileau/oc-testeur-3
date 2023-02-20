@@ -5,14 +5,16 @@
 ![GitHub issues](https://img.shields.io/github/issues-raw/TBoileau/oc-testeur-3?style=for-the-badge)
 
 ## Installation
-
 ```
 git clone git@github.com:TBoileau/oc-testeur-3.git
 ```
 
 ## Déploiement
-
 [https://tboileau.github.io/oc-testeur-3](https://tboileau.github.io/oc-testeur-3)
+
+## Rapport Lighthouse
+* [Desktop](docs/lightouse-desktop.pdf)
+* [Mobile](docs/lightouse-mobile.pdf)
 
 ## Changelog
 [CHANGELOG.md](/CHANGELOG.md) liste tous les changements effectués lors de chaque release.
