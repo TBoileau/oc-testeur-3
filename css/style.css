@@ -41,10 +41,6 @@ body {
   max-width: 1140px;
 }
 
-b {
-  font-weight: var(--fw-bold);
-}
-
 .sr-only {
   position: absolute;
   left: -10000px;
@@ -226,10 +222,48 @@ main {
   padding-right: var(--spacing-base);
   font-weight: var(--fw-bold);
   font-size: var(--text-medium);
+  cursor: pointer;
+  animation-name:filter-out;
+  animation-fill-mode: both;
+  animation-duration: 1s;
 }
 
 .form__check:hover {
-  background-color: var(--color-info);
+  animation-name: filter-in;
+  animation-fill-mode: both;
+  animation-duration: 1s;
+}
+
+@keyframes filter-in {
+  0% {
+    background-color: var(--color-white);
+    transform: scale(1);
+  }
+
+  40% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1.1);
+    background-color: var(--color-info);
+  }
+}
+
+@keyframes filter-out {
+  0% {
+    transform: scale(1.1);
+    background-color: var(--color-info);
+  }
+
+  40% {
+    transform: scale(.9);
+  }
+
+  100% {
+    transform: scale(1);
+    background-color: var(--color-white);
+  }
 }
 
 .form__check:before {
@@ -243,10 +277,6 @@ main {
   background-size: 1.25rem;
   background-repeat: no-repeat;
   background-position: center center;
-}
-
-.form__check:has(input:checked) {
-  background-color: var(--color-info);
 }
 
 .form__check--dog:before {
@@ -315,7 +345,7 @@ main {
   font-size: var(--text-large);
 }
 
-.lodging {
+.lodging > a {
   display: flex;
   flex-direction: column;
   gap: calc(1 / 2 * var(--spacing-base));
@@ -324,7 +354,7 @@ main {
   border-radius: 1rem;
 }
 
-.lodgings--most-popular .lodging {
+.lodgings--most-popular .lodging > a {
   flex-direction: row;
   flex-grow: 1;
 }
@@ -416,7 +446,7 @@ main {
   margin-top: var(--spacing-base);
 }
 
-.activity {
+.activity > a {
   display: flex;
   flex-direction: column;
   border-radius: 1rem;
@@ -436,6 +466,12 @@ main {
   align-items: center;
   font-weight: var(--fw-bold);
   padding: var(--spacing-base);
+}
+
+.lodging > a, .activity > a
+{
+  text-decoration: none;
+  color: inherit;
 }
 
 .footer {
