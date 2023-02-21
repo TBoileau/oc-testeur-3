@@ -92,9 +92,14 @@ main {
   width: calc(50% - (var(--spacing-base) / 2));
 }
 
-.form__check:before {
+.form__check > .icon {
   width: 2.5rem;
   height: 2.5rem;
+}
+
+.form__check > .icon > svg {
+  max-width: 1rem;
+  max-height: 1rem;
 }
 
 .research__info {
