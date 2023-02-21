@@ -229,6 +229,7 @@ main {
 }
 
 .form__check:hover {
+  cursor: pointer;
   background-color: var(--color-info);
 }
 
@@ -315,7 +316,7 @@ main {
   font-size: var(--text-large);
 }
 
-.lodging {
+.lodging > a {
   display: flex;
   flex-direction: column;
   gap: calc(1 / 2 * var(--spacing-base));
@@ -324,7 +325,7 @@ main {
   border-radius: 1rem;
 }
 
-.lodgings--most-popular .lodging {
+.lodgings--most-popular .lodging > a {
   flex-direction: row;
   flex-grow: 1;
 }
@@ -416,7 +417,7 @@ main {
   margin-top: var(--spacing-base);
 }
 
-.activity {
+.activity > a {
   display: flex;
   flex-direction: column;
   border-radius: 1rem;
@@ -436,6 +437,12 @@ main {
   align-items: center;
   font-weight: var(--fw-bold);
   padding: var(--spacing-base);
+}
+
+.lodging > a, .activity > a
+{
+  text-decoration: none;
+  color: inherit;
 }
 
 .footer {
