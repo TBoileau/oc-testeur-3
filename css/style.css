@@ -332,13 +332,17 @@ main {
   font-size: var(--text-large);
 }
 
+.lodging {
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
 .lodging > a {
   display: flex;
   flex-direction: column;
   gap: calc(1 / 2 * var(--spacing-base));
   background: var(--color-white);
   padding: calc(1 / 4 * var(--spacing-base));
-  border-radius: 1rem;
 }
 
 .lodgings--most-popular .lodging > a {
@@ -436,10 +440,14 @@ main {
   margin-top: var(--spacing-base);
 }
 
+.activity {
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
 .activity > a {
   display: flex;
   flex-direction: column;
-  border-radius: 1rem;
 }
 
 .activity__image {
